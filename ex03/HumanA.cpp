@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:01 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 22:11:05 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/25 22:57:19 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ HumanA::~HumanA()
 
 void HumanA::attack()
 {
-	std::cout << "HumanA attacks with their..." << std::endl;
+	std::cout << _name << " attacks with their " << _weaponA.getType() << std::endl;
 }

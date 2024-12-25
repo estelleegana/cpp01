@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:16 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 22:00:19 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/25 22:59:58 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Weapon
 		~Weapon();
 
 		std::string & getType();
-		void setType(std::string newType);
+		void setType(std::string type);
 };
 
 #endif

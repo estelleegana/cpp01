@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:14 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 22:10:07 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/25 23:00:23 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ std::string & Weapon::getType()
 void Weapon::setType(std::string type)
 {
 	_type = type;
+	std::cout << "nouveau type d'arme parametre : " << _type << std::endl;
 }
