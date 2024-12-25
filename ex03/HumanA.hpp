@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:04 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/23 22:47:13 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/25 21:45:37 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 # define HUMAN_A_HPP
 
 # include <iostream>
+# include "Weapon.hpp"
 
 class HumanA
 {
 	private:
+		std::string _name;
+		Weapon _weaponA;
+
 	public:
-		HumanA();
+		HumanA(std::string name, Weapon weaponA);
 		~HumanA();
-}
+
+		void attack();
+};
 
 #endif

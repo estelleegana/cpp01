@@ -1,5 +1,5 @@
 #nom du programme
-NAME = brain
+NAME = violence
 
 #compilateur
 CC = c++
