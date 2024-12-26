@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:01 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 22:57:19 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/26 20:06:13 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 HumanA::HumanA(std::string name, Weapon weaponA) : _name(name), _weaponA(weaponA)
 {
-	std::cout << _name << " prend vie ac une arme de type " << _weaponA.getType() << std::endl;
+	std::cout << GREEN << _name << " prend vie ac une arme de type " << _weaponA.getType() << RESET << std::endl;
 }
 
 HumanA::~HumanA()
 {
-	std::cout << "Destructeur called = HumanA" << std::endl;
+	std::cout << RED << "Destructeur called = HumanA" << RESET << std::endl;
 }
 
 void HumanA::attack()

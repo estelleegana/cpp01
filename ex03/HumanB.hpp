@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:09 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 21:46:46 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/26 20:33:19 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <iostream>
 # include "Weapon.hpp"
+
+# define RED "\033[0;31m"
+# define GREEN "\033[0;32m"
+# define RESET "\033[0m"
 
 class HumanB
 {
@@ -26,6 +30,7 @@ class HumanB
 		HumanB(std::string name);
 		~HumanB();
 
+		void setWeapon(Weapon & type);
 		void attack();
 };
 

@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:07 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 22:57:25 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/26 20:33:24 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ HumanB::HumanB(std::string name) : _weaponB("none"), _name(name)
 HumanB::~HumanB()
 {
 	std::cout << "Destructeur called = HumanB" << std::endl;
+}
+
+void HumanB::setWeapon(Weapon & type)
+{
+	_weaponB = type;
 }
 
 void HumanB::attack()

@@ -6,7 +6,7 @@
 /*   By: estegana <estegana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 22:41:14 by estegana          #+#    #+#             */
-/*   Updated: 2024/12/25 23:00:23 by estegana         ###   ########.fr       */
+/*   Updated: 2024/12/26 20:14:08 by estegana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 Weapon::Weapon()
 {
-	std::cout << "Constructeur called = Weapon" << std::endl;
+	std::cout << GREEN << "Constructeur called = Weapon" << RESET << std::endl;
 }
 
 Weapon::~Weapon()
 {
-	std::cout << "Destructeur called = Weapon" << std::endl;
+	std::cout << RED << "Destructeur called = Weapon" << RESET << std::endl;
 }
 
 Weapon::Weapon(std::string type) : _type(type)
 {
-	std::cout << "type d'arme initialisee : " << _type << std::endl;
+	std::cout << GREEN << "type d'arme initialisee : " << _type << RESET << std::endl;
 }
 
 std::string & Weapon::getType()
@@ -35,5 +35,4 @@ std::string & Weapon::getType()
 void Weapon::setType(std::string type)
 {
 	_type = type;
-	std::cout << "nouveau type d'arme parametre : " << _type << std::endl;
 }
