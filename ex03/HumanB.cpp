@@ -14,7 +14,7 @@
 
 HumanB::HumanB(std::string name) : _weaponB("none"), _name(name)
 {
-	std::cout << _name << " prend vie ac une arme de type " << _weaponB.getType() << std::endl;
+	std::cout << GREEN << _name << " prend vie ac une arme de type " << _weaponB.getType() << RESET << std::endl;
 }
 
 HumanB::~HumanB()
@@ -29,5 +29,7 @@ void HumanB::setWeapon(Weapon & type)
 
 void HumanB::attack()
 {
+	// _weaponB = Weapon->getType();
+	std::cout << "(_weaponB : " << _weaponB.getType() << ")" << std::endl;
 	std::cout << _name << " attacks with their " << _weaponB.getType() << std::endl;
 }

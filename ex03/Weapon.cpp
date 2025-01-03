@@ -35,4 +35,5 @@ std::string & Weapon::getType()
 void Weapon::setType(std::string type)
 {
 	_type = type;
+	std::cout << "(nouvelle arme set : " << _type << ")" << std::endl;
 }
