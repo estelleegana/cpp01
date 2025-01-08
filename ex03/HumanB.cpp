@@ -12,24 +12,25 @@
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _weaponB(NULL), _name(name)
+HumanB::HumanB(std::string name) : _name(name), _weaponB(NULL)
 {
-	std::cout << GREEN << _name << " prend vie ac une arme de type " << _weaponB.getType() << RESET << std::endl;
+	std::cout << GREEN << _name << " prend vie sans arme" << RESET << std::endl;
 }
 
 HumanB::~HumanB()
 {
-	std::cout << "Destructeur called = HumanB" << std::endl;
+	std::cout << RED << "Destructeur called = HumanB" << RESET << std::endl;
 }
 
 void HumanB::setWeapon(Weapon & type)
 {
-	_weaponB = type;
+	_weaponB = & type;
 }
 
 void HumanB::attack()
 {
-	//_weaponB = Weapon->getType();
-	std::cout << "(_weaponB : " << _weaponB.getType() << ")" << std::endl;
-	std::cout << _name << " attacks with their " << _weaponB.getType() << std::endl;
+	if (_weaponB == NULL)
+		std::cout << _name << " attacks bare hands" << std::endl;
+	else
+		std::cout << _name << " attacks with their " << _weaponB->getType() << std::endl;
 }
