@@ -19,13 +19,11 @@ int main()
 	std::string &stringREF = v;
 
 	std::cout << "adresse de la memoire de la variable v: "<< &v << std::endl;
-	std::cout << "adresse de la memoire de stringPTR : " << &stringPTR << std::endl;
-	std::cout << "correction stringPTR : " << stringPTR << std::endl;
+	std::cout << "adresse de la memoire de stringPTR : " << stringPTR << std::endl;
 	std::cout << "adresse de la memoire de stringREF : " << &stringREF << std::endl;
 	std::cout << std::endl;
-
 	std::cout << "valeur de la variable v : " << v << std::endl;
-	std::cout << "valeur de stringPTR : " << &stringPTR << std::endl;
-	std::cout << "correction valeur stringPTR : " << *stringPTR << std::endl;
+	std::cout << "valeur de stringPTR : " << *stringPTR << std::endl;
 	std::cout << "valeur de stringREF : " << stringREF << std::endl;
+	std::cout << std::endl;
 }
