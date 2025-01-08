@@ -10,12 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "header.hpp"
 
+//<filename>, s1, s2
 int main(int argc, char **argv)
 {
 	if (argc != 4)
-		std::cout << "enter the following parameters: ./losers filename string1 string2" << std::endl;
+		std::cout << "enter the following parameters: ./sed filename string1 string2" << std::endl;
 	else
-	
+	{
+		std::ifstream file;
+		file.open(argv[0]);
+		std::string line;
+		getline(file, line);
+		std::cout << "getline de file : " << line << std::endl;
+		// std::ofstream replace;
+		// replace.open("exemple.replace");
+		// replace << line;
+	}
 }
