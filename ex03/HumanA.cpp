@@ -12,7 +12,7 @@
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon weaponA) : _name(name), _weaponA(weaponA)
+HumanA::HumanA(std::string name, Weapon & weaponA) : _name(name), _weaponA(weaponA)
 {
 	std::cout << GREEN << _name << " prend vie ac une arme de type " << _weaponA.getType() << RESET << std::endl;
 }

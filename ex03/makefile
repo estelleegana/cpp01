@@ -16,6 +16,7 @@ SRCS = HumanA.cpp \
 	main.cpp \
 	Weapon.cpp \
 
+
 #creation de fichier(s) objet(s) a partir de fichier(s) source(s)
 OBJS = $(SRCS:.cpp=.o)
 
@@ -24,6 +25,12 @@ $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS)
 
 all:		$(NAME)
+
+testA: fclean
+	c++ -Wall -Wextra -Werror -std=c++98 -o testA HumanA.cpp main.cpp Weapon.cpp
+
+testB: fclean
+	c++ -Wall -Wextra -Werror -std=c++98 -o testB HumanB.cpp main.cpp Weapon.cpp
 
 clean:
 			$(RM) $(OBJS)

@@ -15,8 +15,9 @@
 
 # include <iostream>
 
-# define RED "\033[0;31m"
+# define BOLD "\033[1;30m"
 # define GREEN "\033[0;32m"
+# define RED "\033[0;31m"
 # define RESET "\033[0m"
 
 class Weapon
@@ -25,7 +26,7 @@ class Weapon
 		std::string _type;
 
 	public:
-		Weapon();
+		// Weapon();
 		Weapon(std::string _type);
 		~Weapon();
 
