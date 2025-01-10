@@ -12,30 +12,22 @@
 
 #include "header.hpp"
 
-//<filename>, s1, s2
 int main(int argc, char **argv)
 {
 	if (argc != 4)
 		std::cout << "enter the following parameters: ./sed <filename> string1 string2" << std::endl;
 	else
 	{
-		//ouvrir le filename (argv1)
+		//ouvr//<filename>, s1, s2ir le filename (argv1)
 		std::ifstream file;
 		file.open(argv[1]);
 		if (!file)
 		{
 			std::cout << "file does not exist" << std::endl;
 			exit(1);
-		}
-		//creer un filename.replace
-		std::string nom1;
-		std::string nom2;
-		std::string nom_vf;
-		nom1 = argv[1];
-		nom2 = ".replace";
-		nom_vf = nom1 + nom2;
+		std::string s2 = argv[3];
 		std::ofstream replace;
-		replace.open(nom_vf);
+		replace.open(newname);
 		//lire ligne par ligne et copier ds filename.replace
 		std::string line;
 		getline(file, line);
@@ -48,7 +40,8 @@ int main(int argc, char **argv)
 		//remplacer s1 par s2 dans filename.replace
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
-		//std::cout << "s1 et s2 : " << s1 << s2 << std::endl;
-		std::string verif;
+		// std::string wordtest = "non";
+		// std::cout << "compare : " << wordtest.compare(s1) << std::endl;
+		// std::cout << "compare : " << wordtest.compare(s2) << std::endl;
 	}
 }
