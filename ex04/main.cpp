@@ -14,10 +14,6 @@
 
 int main(int argc, char **argv)
 {
-	std::string filename = argv[1];
-	std::string s1 = argv[2];
-	std::string s2 = argv[3];
-
 	if (argc != 4)
 		std::cout << "enter the following parameters: ./sed <filename> string1 string2" << std::endl;
 	else
@@ -32,6 +28,7 @@ int main(int argc, char **argv)
 			exit(1);
 		}
 		//creer un filename.replace
+		std::string filename = argv[1];
 		std::string nom2;
 		std::string newname;
 		nom2 = ".replace";
@@ -39,15 +36,28 @@ int main(int argc, char **argv)
 		std::ofstream replace;
 		replace.open(newname);
 		//lire ligne par ligne et copier ds filename.replace
+		std::string s1 = argv[2];
+		std::string s2 = argv[3];
 		std::string line;
+		std::string modif;
 		getline(file, line);
+		int i;
 		while (file)
 		{
+			//remplacer s1 par s2 dans filename.replace
+			if ((i = line.find(s1)) != std::string::npos)
+			{
+				modif = "";
+				std::cout << "i: " << i << std::endl;
+				modif.append(line.substr(0, i));
+				std::cout << "modif: " << modif << std::endl;
+				modif.append(s2);
+				std::cout << "modif_vf: " << modif << std::endl;
+				line = modif;
+			}
 			replace << line;
 			replace << std::endl;
 			getline(file, line);
 		}
-		//remplacer s1 par s2 dans filename.replace
-		
 	}
 }
