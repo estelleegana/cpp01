@@ -35,29 +35,40 @@ int main(int argc, char **argv)
 		newname = filename + nom2;
 		std::ofstream replace;
 		replace.open(newname);
-		//lire ligne par ligne et copier ds filename.replace
+		//lire ligne par ligne, remplacer et copier ds filename.replace
 		std::string s1 = argv[2];
 		std::string s2 = argv[3];
 		std::string line;
 		std::string modif;
-		getline(file, line);
 		int i;
-		while (file)
+		while (getline(file, line))
 		{
-			//remplacer s1 par s2 dans filename.replace
-			if ((i = line.find(s1)) != std::string::npos)
+			//si s1 est ds la line
+			if (line.find(s1) != std::string::npos)
 			{
-				modif = "";
-				std::cout << "i: " << i << std::endl;
-				modif.append(line.substr(0, i));
-				std::cout << "modif: " << modif << std::endl;
-				modif.append(s2);
-				std::cout << "modif_vf: " << modif << std::endl;
+				//trouver s1, et sa position ac curseur i
+				while ((i = line.find(s1)) != std::string::npos)
+				{
+					// std::cout << "i: " << i << std::endl;
+					//creer nouvelle line sans s1
+					modif.append(line.substr(0, i));
+					// std::cout << "modif-s1: " << modif << std::endl;
+					//ajouter s2
+					modif.append(s2);
+					// std::cout << "modif+s2: " << modif << std::endl;
+					//avancer a apres s2
+					i = i + s1.length();
+					// std::cout << "i+s2: " << i << std::endl;
+					//remplacer line par reste de line apres remplacement
+					line = line.substr(i);
+					// std::cout << "reste de line: " << line << std::endl;
+					i = 0;
+				}
 				line = modif;
 			}
+			//ajouter line au filename.replace
 			replace << line;
 			replace << std::endl;
-			getline(file, line);
 		}
 	}
 }
