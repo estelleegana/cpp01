@@ -46,8 +46,10 @@ int main(int argc, char **argv)
 			//si s1 est ds la line
 			if (line.find(s1) != std::string::npos)
 			{
+				modif = "";
+				// std::cout << "line.length() : " << line.length() << std::endl;
 				//trouver s1, et sa position ac curseur i
-				while ((i = line.find(s1)) != std::string::npos)
+				while ((i = line.find(s1)) != std::string::npos && i != line.length())
 				{
 					// std::cout << "i: " << i << std::endl;
 					//creer nouvelle line sans s1
@@ -64,6 +66,7 @@ int main(int argc, char **argv)
 					// std::cout << "reste de line: " << line << std::endl;
 					i = 0;
 				}
+				modif.append(line);
 				line = modif;
 			}
 			//ajouter line au filename.replace

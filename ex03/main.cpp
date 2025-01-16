@@ -14,8 +14,7 @@
 #include "HumanB.hpp"
 #include "Weapon.hpp"
 
-//pour humanA: appeler une ref weapon dans constructeur
-//pour humanB: appeler une ref dans setWeapon
+//decommenter constructeur Weapon
 int main()
 {
 	std::cout << std::endl;
