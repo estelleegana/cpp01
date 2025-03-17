@@ -3,6 +3,10 @@
 
 # include <iostream>//cin, cout, cerr
 
+# define bRED "\033[1;31m"
+# define bGREEN "\033[1;32m"
+# define RESET "\033[0m"
+
 class Harl {
 private:
     //private member functions

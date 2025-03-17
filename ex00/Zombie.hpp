@@ -15,16 +15,17 @@
 
 # include <iostream>
 
-class Zombie {
-private:
-	std::string _name;//attribut prive de type string
+class Zombie
+{
+	private:
+		std::string _name;//attribut prive de type string
 
-public:
-	Zombie();//constructeur
-	~Zombie();//destructeur
+	public:
+		Zombie();//constructeur par defaut
+		~Zombie();//destructeur par defaut
 
-	void setName(std::string name);
-	void announce( void );//fonction membre
+		void setName(std::string name);
+		void announce( void );//fonction membre
 };
 
 Zombie* newZombie( std::string name );

@@ -12,17 +12,19 @@
 
 #include "Zombie.hpp"
 
+//zombies s'annoncent ds le main
 int main(int argc, char **argv)
 {
-	int N = 5;
+	int N;
 	std::string name;
 	Zombie *z;
 
-	if (argc != 2)
-		std::cout << "enter a name (string) in parameter" << std::endl;
+	if (argc != 3)
+		std::cout << "please enter ./ZombieHorde <(std::string)name> <(int)N>" << std::endl ;
 	else
 	{
 		name = (std::string)argv[1];
+		N = std::stoi(argv[2]);
 		for (int i = 0; i < N; i++)
 		{
 			z = zombieHorde(i, name);

@@ -13,12 +13,7 @@
 #ifndef HUMAN_A_HPP
 # define HUMAN_A_HPP
 
-# include <iostream>
-# include "Weapon.hpp"
-
-# define RED "\033[0;31m"
-# define GREEN "\033[0;32m"
-# define RESET "\033[0m"
+#include "Weapon.hpp"
 
 class HumanA
 {

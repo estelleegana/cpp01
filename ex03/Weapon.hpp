@@ -11,14 +11,15 @@
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
-# define WEAPON_HPP
+#define WEAPON_HPP
 
-# include <iostream>
+#include <iostream>
 
-# define BOLD "\033[1;30m"
-# define GREEN "\033[0;32m"
-# define RED "\033[0;31m"
-# define RESET "\033[0m"
+#define bRED "\033[1;31m"
+#define bGREEN "\033[1;32m"
+#define BLUE "\033[0;34m"
+#define RESET "\033[0m"
+
 
 class Weapon
 {
@@ -30,7 +31,7 @@ class Weapon
 		Weapon(std::string _type);
 		~Weapon();
 
-		std::string & getType();
+		std::string const & getType() const;
 		void setType(std::string type);
 };
 

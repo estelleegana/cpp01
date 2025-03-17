@@ -17,17 +17,19 @@
 // 	std::cout << GREEN << "Constructeur called = Weapon" << RESET << std::endl;
 // }
 
-Weapon::~Weapon()
-{
-	std::cout << RED << "Destructeur called = Weapon '" << _type << "'" << RESET << std::endl;
-}
-
 Weapon::Weapon(std::string type) : _type(type)
 {
-	std::cout << GREEN << "Constructeur called = Weapon '" << _type << "'" << RESET << std::endl;
+	std::cout << bGREEN << "Constructeur called = Weapon " << RESET BLUE <<  _type << RESET << std::endl;
 }
 
-std::string & Weapon::getType()
+Weapon::~Weapon()
+{
+	std::cout << bRED << "Destructeur called = Weapon " << RESET BLUE << _type << RESET << std::endl;
+}
+
+
+
+std::string const & Weapon::getType() const
 {
 	return (_type);
 }

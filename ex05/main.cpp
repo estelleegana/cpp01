@@ -6,13 +6,11 @@ int main(int argc, char **argv)
         std::cout << "./harl <level (debug, info, warning, error)>" << std::endl;
     else
     {
-        //creation objet
-        Harl obj;
+        Harl mec;
         //declaration pointeur sur la fonction membre
         void (Harl::*pointeur)(std::string) = &Harl::complain;
 
         //appel de la fonction membre
-        (obj.*pointeur)(argv[1]);
+        (mec.*pointeur)(argv[1]);
     }    
-    
 }
