@@ -7,10 +7,6 @@ int main(int argc, char **argv)
     else
     {
         Harl mec;
-        //declaration pointeur sur la fonction membre
-        void (Harl::*pointeur)(std::string) = &Harl::complain;
-
-        //appel de la fonction membre
-        (mec.*pointeur)(argv[1]);
+        mec.complain(argv[1]);
     }    
 }

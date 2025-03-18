@@ -25,10 +25,6 @@ int main(int argc, char **argv)
 	{
 		name = (std::string)argv[1];
 		N = std::stoi(argv[2]);
-		for (int i = 0; i < N; i++)
-		{
-			z = zombieHorde(i, name);
-			delete z;
-		}
+		z = zombieHorde(N, name);
 	}
 }

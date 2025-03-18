@@ -15,6 +15,11 @@
 
 # include <iostream>
 
+#define bRED "\033[1;31m"
+#define bGREEN "\033[1;32m"
+#define bBLUE "\033[1;34m"
+#define RESET "\033[0m"
+
 class Zombie {
 private:
 	std::string _name;//attribut prive de type string

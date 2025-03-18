@@ -16,8 +16,13 @@ Zombie *zombieHorde( int N, std::string name )
 {
 	Zombie *horde;
 
-	horde = new Zombie;
-	horde->setName(name);
-	horde->announce();
+	horde = new Zombie[N];
+	for (int i = 0; i < N; i++)
+	{
+		horde[i].setName(name);
+		horde[i].announce();
+		
+	}
+	delete[] horde;
 	return (horde);
 }

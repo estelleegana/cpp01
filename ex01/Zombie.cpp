@@ -14,12 +14,12 @@
 
 Zombie::Zombie()
 {
-	std::cout << "Constructeur called - Zombie" << std::endl;
+	std::cout << bGREEN << "Constructeur called - Zombie" << RESET << std::endl;
 }
 
 Zombie::~Zombie()
 {
-	std::cout << "Destructeur called - Zombie" << std::endl;
+	std::cout << bRED << "Destructeur called - Zombie" << RESET << std::endl;
 }
 
 void Zombie::setName(std::string name)
@@ -29,5 +29,5 @@ void Zombie::setName(std::string name)
 
 void Zombie::announce( void )
 {
-	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << bBLUE << _name << RESET << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
